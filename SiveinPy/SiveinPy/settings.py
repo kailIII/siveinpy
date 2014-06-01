@@ -24,7 +24,14 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+from unipath import Path
+RUTA_PROYECTO = Path(__file__).ancestor(2)
+
 ALLOWED_HOSTS = []
+
+TEMPLATE_DIRS = (
+    RUTA_PROYECTO.child('templates'),
+)
 
 
 # Application definition
@@ -36,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.inicio',
 )
 
 MIDDLEWARE_CLASSES = (
