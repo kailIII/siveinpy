@@ -33,6 +33,8 @@ TEMPLATE_DIRS = (
     RUTA_PROYECTO.child('templates'),
 )
 
+MEDIA_ROOT = RUTA_PROYECTO.child('media')
+
 
 # Application definition
 
@@ -44,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.inicio',
+    'apps.autores',
 )
 
 MIDDLEWARE_CLASSES = (
