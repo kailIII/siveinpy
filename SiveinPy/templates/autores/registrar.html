@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Registrar autor</h1>
-	<form method="POST" enctype="multipart/form-data">
+	<form method="POST" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %} >
 	{% csrf_token %}
 	{{ form.as_p }}
 <input type="submit" value="Submit" />

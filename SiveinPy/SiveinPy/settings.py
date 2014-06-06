@@ -36,8 +36,9 @@ TEMPLATE_DIRS = (
 MEDIA_ROOT = RUTA_PROYECTO.child('media')
 
 
-# Application definition
+MEDIA_URL = 'http://cicala-abrook.codio.io:3000/media/'
 
+# Application definition
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
