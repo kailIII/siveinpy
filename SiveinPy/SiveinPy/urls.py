@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, include, url
 
+from django.conf import settings
+
 from django.contrib import admin
 admin.autodiscover()
 
@@ -15,4 +17,6 @@ urlpatterns = patterns('',
 
     # autores
     url(r'^autores/',include('apps.autores.urls')),
+					   
+	url(r'^static/(.*)$', 'django.views.static.serve', {'document_root' : settings.STATIC_ROOT}),				   
 )
