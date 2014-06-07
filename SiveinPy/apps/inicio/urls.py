@@ -5,6 +5,6 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'SiveinPy.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url(r'^$', 'apps.inicio.views.index', name='homepage'),
+    url(r'^$', index.as_view(), name='homepage'),
     url(r'^index/$', index2.as_view() ),
 )
