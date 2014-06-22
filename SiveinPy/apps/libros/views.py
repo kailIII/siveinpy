@@ -1,12 +1,9 @@
 from django.views.generic import TemplateView,ListView
 from .models import Libro
 from apps.autores.models import Autor
-
-
+from django.shortcuts import render
 
 class BuscarView(TemplateView):
-	
-
 	def post(self, request, *args, **kwargs):
 		buscar = request.POST['buscalo']
 		libros = Libro.objects.filter(nombre__contains=buscar)

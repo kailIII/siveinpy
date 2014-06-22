@@ -19,5 +19,7 @@ urlpatterns = patterns('',
 
     # autores
     url(r'^autores/',include('apps.autores.urls')),
-
+                       
+    # libros
+    url(r'^libros/',include('apps.libros.urls')),
 )
